@@ -15,7 +15,6 @@
     font-size: 30px;
 }
 button {padding: 10px;}
-#spacer {height: 270px;}
 p, button {font-size: 17px;}
 .price {font-size: 21px;}
 .item {display: block;}
@@ -32,16 +31,12 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
     margin: 0;
     margin-bottom: 10px;
 }
-@media (min-width: 400px) {
-    #spacer {height: 220px;}
-}
 @media (min-width: 768px) {
     #shopa {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
-    #spacer {height: 190px;}
     .item {
         display: flex;
         flex-direction: column;
@@ -61,7 +56,6 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
         cursor: pointer;
         font-size: 20px;
     }
-    #spacer {height: 190px;}
     p, button {font-size: 15px;}
     .price {font-size: larger;}
     button {padding: 5px;}
@@ -265,5 +259,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     color: var(--primary-color);
     font-size: larger;
 }
+#spacer {height: 20vw;}
 
 [hidden] {display: none !important;}
