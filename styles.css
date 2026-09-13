@@ -220,14 +220,14 @@ input {margin-bottom: 10px;}
     background: white;
 }
 input[type="date"]::-webkit-datetime-edit, input::placeholder {
-    color: #818397;
+    color: #818397 !important;
     font-style: italic;
 }
 input[type="date"].has-date::-webkit-datetime-edit {
     color: black;
     font-style: normal;
 }
-input[type="date"]::-webkit-calendar-picker-indicator {display: none;}
+input[type="date"]::-webkit-calendar-picker-indicator {cursor: pointer;}
 input[type="radio"] {display: none;}
 label:has(input[type="radio"]:checked) {
     background: var(--primary-color);
