@@ -23,7 +23,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
     font-size: 17px;
     padding: 10px;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     background: white;
     cursor: pointer;
     border: 1px solid black;
@@ -259,7 +259,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     font-size: larger;
 }
 #spacer {
-    height: calc(334px - 13vw);
+    height: calc(312px - 10vw);
     min-height: 150px;
     max-height: 300px;
 }
