@@ -259,6 +259,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     color: var(--primary-color);
     font-size: larger;
 }
-#spacer {height: 12vw;}
+.spacer {height: calc(335.4px - 17.815vw);}
 
 [hidden] {display: none !important;}
