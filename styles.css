@@ -258,6 +258,10 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     color: var(--primary-color);
     font-size: larger;
 }
-#spacer {height: clamp(150px, calc(333.68px - 11.88vw), 300px);}
+#spacer {
+    height: calc(334px - 13vw);
+    min-height: 150px;
+    max-height: 300px;
+}
 
 [hidden] {display: none !important;}
