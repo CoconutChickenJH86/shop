@@ -102,9 +102,9 @@ h1, h2 {
     text-decoration: underline;
     text-align: center;
 }
-p, button, img, td, th, input[type="text"], input[type="number"], input[type="email"], input[type="date"], input::placeholder, label {
-    font-family: "Verdana", system-ui, sans-serif;
-    color: black;
+p, button, img, td, th, input[type="text"], input[type="number"], input[type="email"], input[type="date"], input::placeholder, label {font-family: "Verdana", system-ui, sans-serif;}
+@layer low-priority {
+    p, button, img, td, th, input[type="text"], input[type="number"], input[type="email"], input[type="date"], input::placeholder, label {color: black;}
 }
 input::placeholder {font-style: italic;}
 .counter, .countero {
