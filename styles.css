@@ -185,6 +185,8 @@ tfoot {border-top: 1px solid black;}
     position: absolute;
     left: 10px;
     top: 0;
+    max-width: 20vw;
+    overflow: auto;
 }
 form {
     border: 1px solid black;
