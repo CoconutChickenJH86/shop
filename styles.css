@@ -15,7 +15,7 @@
     font-size: 30px;
 }
 button {padding: 10px;}
-#spacer {height: 270px;}
+#spacer {height: 300px;}
 p, button {font-size: 17px;}
 .price {font-size: 21px;}
 .item {display: block;}
@@ -31,6 +31,9 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
     border-radius: 2px;
     margin: 0;
     margin-bottom: 10px;
+}
+@media (min-width: 560px) {
+    #spacer {height: 230px;}
 }
 @media (min-width: 768px) {
     #shopa {
