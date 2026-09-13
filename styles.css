@@ -15,7 +15,7 @@
     font-size: 30px;
 }
 button {padding: 10px;}
-#spacer {height: 220px;}
+#spacer {height: 270px;}
 p, button {font-size: 17px;}
 .price {font-size: 21px;}
 .item {display: block;}
@@ -32,6 +32,9 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
     margin: 0;
     margin-bottom: 10px;
 }
+@media (min-width: 400px) {
+    #spacer {height: 220px;}
+}
 @media (min-width: 768px) {
     #shopa {
         display: grid;
@@ -46,7 +49,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
         gap: 0;
     }
 }
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
     #shopa {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
