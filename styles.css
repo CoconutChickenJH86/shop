@@ -31,7 +31,12 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
     margin: 0;
     margin-bottom: 10px;
 }
-#checkouts {width: fit-content;}
+#checkouts {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
 @media (min-width: 768px) {
     #shopa {
         display: grid;
