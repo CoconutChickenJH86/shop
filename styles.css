@@ -32,6 +32,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
     margin-bottom: 10px;
 }
 #checkouts {
+    display: block;
     width: fit-content;
     margin: 0 auto;
 }
@@ -48,6 +49,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
         gap: 0;
     }
     #checkouts {
+        display: inline-block;
         position: absolute;
         left: 10px;
         top: 0;
