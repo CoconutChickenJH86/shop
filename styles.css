@@ -105,7 +105,10 @@ h1, h2 {
     text-decoration: underline;
     text-align: center;
 }
-p, button, img, td, th, input[type="text"], input[type="number"], input[type="email"], input[type="date"], input::placeholder, label {font-family: "Verdana", system-ui, sans-serif;}
+p, button, img, td, th, input[type="text"], input[type="number"], input[type="email"], input[type="date"], input::placeholder, label {
+    font-family: "Verdana", system-ui, sans-serif;
+    color: black;
+}
 input::placeholder {font-style: italic;}
 .counter, .countero {
     border-right: 1px solid darkgray;
