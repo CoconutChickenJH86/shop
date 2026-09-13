@@ -15,7 +15,7 @@
     font-size: 30px;
 }
 button {padding: 10px;}
-#spacer {margin-top: 250px;}
+#spacer {height: 270px;}
 p, button {font-size: 17px;}
 .price {font-size: 21px;}
 .item {display: block;}
@@ -38,7 +38,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
-    #spacer {margin-top: 200px;}
+    #spacer {height: 200px;}
     .item {
         display: flex;
         flex-direction: column;
@@ -58,7 +58,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
         cursor: pointer;
         font-size: 20px;
     }
-    #spacer {margin-top: 190px;}
+    #spacer {height: 190px;}
     p, button {font-size: 15px;}
     .price {font-size: larger;}
     button {padding: 5px;}
