@@ -31,6 +31,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
     margin: 0;
     margin-bottom: 10px;
 }
+#checkouts {width: fit-content;}
 @media (min-width: 768px) {
     #shopa {
         display: grid;
@@ -42,6 +43,11 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
         flex-direction: column;
         justify-content: space-between;
         gap: 0;
+    }
+    #checkouts {
+        position: absolute;
+        left: 10px;
+        top: 0;
     }
 }
 @media (min-width: 1024px) {
@@ -181,13 +187,6 @@ a {
 }
 tfoot, thead {text-align: left;}
 tfoot {border-top: 1px solid black;}
-#checkouts {
-    position: absolute;
-    left: 10px;
-    top: 0;
-    max-width: 30vw;
-    overflow: auto;
-}
 form {
     border: 1px solid black;
     border-radius: 3px;
