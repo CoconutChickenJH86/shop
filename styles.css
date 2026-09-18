@@ -8,7 +8,6 @@
     --a-color: #2485c9;
     --green: #85e35f;
 }
-/*
 @media (prefers-color-scheme: dark) {
     :root {
         --primary-color: #9ecef0;
@@ -21,7 +20,6 @@
         --green: #24630a;
     }
 }
-*/
 
 #shopa {
     display: flex;
