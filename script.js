@@ -46,7 +46,7 @@ function addCart(counterId, item, price, button) {
                 <button onclick="this.nextElementSibling.hidden = false; event.stopPropagation();" style="width: 100%;">🗑</button>
                 <div class="confirm" hidden>
                     <span>Are you sure?</span>
-                    <button onclick="delItem(this, true);">Yes</button>
+                    <button onclick="delItem(this, true);" style="color: red;">Yes</button>
                     <span>|</span>
                     <button onclick="delItem(this, false);">No</button>
                 </div>
@@ -81,7 +81,7 @@ function autoAddCart(numberOfItems, item, price) {
                 <button onclick="this.nextElementSibling.hidden = false; event.stopPropagation();" style="width: 100%;">🗑</button>
                 <div class="confirm" hidden>
                     <span>Are you sure?</span>
-                    <button onclick="delItem(this, true);">Yes</button>
+                    <button onclick="delItem(this, true);" style="color: red;">Yes</button>
                     <span>|</span>
                     <button onclick="delItem(this, false);">No</button>
                 </div>
