@@ -342,13 +342,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     justify-content: center;
 }
 #confirmOrder * {width: fit-contents;}
-#confirmOrder span {
-    display: block;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 body > div {
     padding: 10px;
     box-sizing: border-box;
