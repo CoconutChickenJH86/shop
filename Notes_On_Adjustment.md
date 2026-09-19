@@ -34,6 +34,7 @@ To add a new input for the checkout form, just add in the space between start of
 - text
 - email
 - number
+- date
 - radio
 
 Also, go to `submitFormA()` and change the validity to fit the new input.
