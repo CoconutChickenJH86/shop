@@ -304,6 +304,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 }
 #spacer {
     height: calc(312.18px - 10.08vw);
+     /* That's proof I didn't study math; I used AI */
     min-height: 150px;
     max-height: 300px;
 }
