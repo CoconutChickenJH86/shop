@@ -1,3 +1,4 @@
+// Sec. A: Miscellaneous
 function values(id, add, n="10") {
     const number = document.getElementById(id);
     if (number.textContent === "0" && !add || number.textContent === n && add) {
@@ -153,7 +154,18 @@ function valuesCart(button, add, n="10") {
     calculateTotal();
     storeCart();
 }
+document.addEventListener("click", (event) => {
+    if (event.target.closest(".confirm") || event.target.closest("#confirmClear") || event.target.closest("#confirmOrder")) {
+        return;
+    }
+    document.querySelectorAll(".confirm").forEach(element => {
+        element.hidden = true;
+    });
+    document.getElementById("confirmClear").hidden = true;
+    document.getElementById("confirmOrder").hidden = true;
+});
 
+// Sec. B: Submit Form
 function submitFormA(event) {
     event.preventDefault();
     const errorMessage = document.getElementById("form-not-filled");
@@ -191,6 +203,8 @@ function submitFormA(event) {
         if (input.validity.valueMissing) {
             errorMessage.textContent = "❗ Please fill out all required fields.";
             errorMessage.hidden = false;
+            document.activeElement.blur();
+            input.focus();
             break;
         }
     }
@@ -206,6 +220,7 @@ function submitFormA(event) {
 }
 function submitFormB() {
     alert("Form Filled!\n" + JSON.stringify(analyseData(), null, 4));
+    // Feed `analyseData()` into backend in future
     select('homes', ['checkouts'], true, true);
     clearCart(true);
     document.querySelector("form").reset();
@@ -216,7 +231,6 @@ function submitFormB() {
         }
     }, 5000);
 }
-// Functions and stuff for submitForm() below
 function analyseData() {
     const tRows = document.querySelector("tbody").querySelectorAll("tr");
     let cart = {};
@@ -250,17 +264,15 @@ function deleteParent(button, useParent=true) {
     }, 600);
 }
 
-// Minimum Current Date input[type="date"]
+// Sec. C: input[type="date"] stuff
 const today = new Date();
 document.querySelector('input[type="date"]').setAttribute('min', `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`);
-
-// Date CSS toggle empty & full
 const dateInput = document.querySelector('input[type="date"]');
 dateInput.addEventListener("change", () => {
     dateInput.classList.toggle("has-date", dateInput.value !== "");
 });
 
-// localStorage store and get cart
+// Sec. D: localStorage store cart
 function storeCart() {
     const cartItems = document.querySelector("tbody").querySelectorAll("tr");
     let cart = [];
@@ -274,7 +286,6 @@ function storeCart() {
     localStorage.removeItem("cart");
     localStorage.setItem("cart", JSON.stringify(cart));
 }
-// get cart
 if (localStorage.getItem("cart") !== null) {
     const cart = JSON.parse(localStorage.getItem("cart"));
     for (const item of cart) {
@@ -288,18 +299,3 @@ if (localStorage.getItem("cart") !== null) {
         }
     }, 5000);
 }
-
-document.addEventListener("click", (event) => {
-    if (
-        event.target.closest(".confirm") ||
-        event.target.closest("#confirmClear") ||
-        event.target.closest("#confirmOrder")
-    ) {
-        return;
-    }
-    document.querySelectorAll(".confirm").forEach(element => {
-        element.hidden = true;
-    });
-    document.getElementById("confirmClear").hidden = true;
-    document.getElementById("confirmOrder").hidden = true;
-});
