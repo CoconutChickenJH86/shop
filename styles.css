@@ -39,7 +39,12 @@
     font-size: 25px;
     padding: 5px;
 }
-.controlo {padding: 3px; display: flex; align-items: center; justify-content: center;}
+.controlo {
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 button {padding: 10px;}
 p, button, span {font-size: 17px;}
 .price, #order-successful button, #cart-saved button {font-size: 21px;}
@@ -65,8 +70,8 @@ input[type="text"], input[type="number"], input[type="email"], input[type="date"
 form {margin: 0 10px; width: calc(100% - 20px);}
 .confirm {
     padding: 10px;
-    right: 170px;
-    min-width: 210px;
+    right: 60px;
+    width: max-content;
 }
 #confirmClear, #confirmOrder {padding: 10px;}
 @media (min-width: 768px) {
@@ -111,8 +116,6 @@ form {margin: 0 10px; width: calc(100% - 20px);}
     .confirm {
         padding: 5px;
         right: -200px;
-        width: fit-contents;
-        min-width: 0;
     }
     #confirmClear, #confirmOrder {padding: 5px;}
 }
@@ -302,9 +305,10 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     top: 5px;
     padding: 0;
 }
+#order-successful span, #cart-saved span {display: block; width: 95%;}
 #spacer {
     height: calc(312.18px - 10.08vw);
-     /* That's proof I didn't study math; I used AI */
+     /* I'm so bad at math, the above was made using AI */
     min-height: 150px;
     max-height: 300px;
 }
