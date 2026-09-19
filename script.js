@@ -154,7 +154,7 @@ function valuesCart(button, add, n="10") {
     storeCart();
 }
 
-function submitFormA() {
+function submitFormA(event) {
     event.preventDefault();
     const errorMessage = document.getElementById("form-not-filled");
     const name = document.getElementById("name");
