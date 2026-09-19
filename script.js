@@ -164,6 +164,9 @@ document.addEventListener("click", (event) => {
     document.getElementById("confirmClear").hidden = true;
     document.getElementById("confirmOrder").hidden = true;
 });
+setTimeout(() => {
+    document.getElementById("finished-shopping").hidden = false;
+}, 6000)
 
 // Sec. B: Submit Form
 function submitFormA(event) {
