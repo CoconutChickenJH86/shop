@@ -341,8 +341,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     gap: 7px;
     justify-content: center;
 }
-#confirmOrder * {
-    width: fit-contents;
+#confirmOrder * {width: fit-contents;}
+#confirmOrder span {
+    display: block;
     height: 100%;
     display: flex;
     justify-content: center;
