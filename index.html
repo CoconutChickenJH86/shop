@@ -94,7 +94,7 @@
             <button onclick="this.nextElementSibling.hidden = false; event.stopPropagation();" id="clear-cart-btn">🗑 Clear Cart</button>
             <div id="confirmClear" hidden>
                 <span>Are you sure?</span>
-                <button onclick="clearCart(true);">Yes</button>
+                <button onclick="clearCart(true);" style="color: red;">Yes</button>
                 <span>|</span>
                 <button onclick="clearCart(false);">No</button>
             </div>
@@ -148,7 +148,7 @@
             </div>
             <div id="confirmOrder" hidden>
                 <span>Please confirm placing order.</span>
-                <button onclick="submitFormB();" type="button">Yes</button>
+                <button onclick="submitFormB();" type="button" style="color: var(--primary-color);">Yes</button>
                 <span>|</span>
                 <button onclick="document.getElementById('confirmOrder').hidden = true;" type="button">No</button>
             </div>
