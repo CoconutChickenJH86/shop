@@ -85,11 +85,11 @@
                 </div>
             </div>
         </div>
-        <p style="text-align: center;">Finished Shopping? Go to your cart and check out <a onclick="select('carts', ['shops']);">here</a>!</p>
+        <p style="text-align: center;" id="finished-shopping" hidden>Finished Shopping? Go to your cart and check out <a onclick="select('carts', ['shops']);">here</a>!</p>
     </div>
     <div id="cart" hidden>
         <h1>Your Cart</h1>
-        <p id="cart-empty" style="color: var(--black);" class="error">❗ Nothing in cart yet! Buy some stuff first <a onclick="select('shops', ['carts']);">here</a>.</p>
+        <p id="cart-empty" style="color: var(--black);" class="error">❗ Nothing in cart yet! Buy some stuff first <a onclick="select('shops', ['carts']);">at the shop</a>.</p>
         <div id="cart-content-container" hidden>
             <button onclick="this.nextElementSibling.hidden = false; event.stopPropagation();" id="clear-cart-btn">🗑 Clear Cart</button>
             <div id="confirmClear" hidden>
