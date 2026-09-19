@@ -305,7 +305,13 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     top: 5px;
     padding: 0;
 }
-#order-successful span, #cart-saved span {display: block; width: 95%;}
+#order-successful span, #cart-saved span {
+    display: block;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
 #spacer {
     height: calc(312.18px - 10.08vw);
      /* I'm so bad at math, the above was made using AI */
