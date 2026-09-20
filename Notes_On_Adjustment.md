@@ -1,4 +1,3 @@
-
 # Part I: Items For Sale
 
 Add an item in `#shopa`. Use below format:
