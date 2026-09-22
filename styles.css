@@ -74,7 +74,7 @@ form {margin: 0 10px; width: calc(100% - 20px);}
     width: max-content;
 }
 #confirmClear, #confirmOrder {padding: 10px;}
-#rickroll {opacity: 5%;}
+#rickroll {opacity: 2%;}
 @media (min-width: 768px) {
     #shopa {
         display: grid;
