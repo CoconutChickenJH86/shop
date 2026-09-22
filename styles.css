@@ -74,6 +74,7 @@ form {margin: 0 10px; width: calc(100% - 20px);}
     width: max-content;
 }
 #confirmClear, #confirmOrder {padding: 10px;}
+#rickroll {opacity: 5%;}
 @media (min-width: 768px) {
     #shopa {
         display: grid;
@@ -118,6 +119,7 @@ form {margin: 0 10px; width: calc(100% - 20px);}
         right: -200px;
     }
     #confirmClear, #confirmOrder {padding: 5px;}
+    #rickroll {opacity: 0;}
 }
 img {
     width: 100%;
@@ -346,5 +348,14 @@ body > div {
     padding: 10px;
     box-sizing: border-box;
 }
+#rickroll {
+    border: none;
+    background: var(--primary-color);
+    color: var(--white);
+    position: absolute;
+    bottom: 10px;
+    transition: opacity 0.3s ease;
+}
+#rickroll:hover, #rickroll:focus {opacity: 100%;}
 
 [hidden] {display: none !important;}
