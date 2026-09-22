@@ -140,6 +140,7 @@ function valuesCart(button, add, n="10") {
         return;
     } else if (number.textContent === "1" && !add) {
         button.closest("tr").querySelector(".confirm").hidden = false;
+        event.stopPropagation();
         return;
     }
     let newNumber;
