@@ -11,13 +11,14 @@
 <body>
     <header>
         <div style="margin: 10px;">
-            <h1 style="color: white;">The Shop of Bazooka-ness</h1>
+            <h1 style="color: white;">The Shop of Bazooka-ness™</h1>
             <p style="color: white;">Our Shop contains all of your daily needs and more! Come explore and pick up your favorites. Everything you can imagine is available!</p>
         </div>
         <nav>
-            <button id="homes" class="select" onclick="select('homes', ['shops', 'carts']);">🏠 Home</button>
-            <button id="shops" onclick="select('shops', ['homes', 'carts']);">🧺 Shop</button>
-            <button id="carts" onclick="select('carts', ['shops', 'homes']);">🛒 Cart</button>
+            <button id="homes" class="select" onclick="select('homes', ['shops', 'carts', 'contacts']);">🏠 Home</button>
+            <button id="shops" onclick="select('shops', ['homes', 'carts', 'contacts']);">🧺 Shop</button>
+            <button id="carts" onclick="select('carts', ['shops', 'homes', 'contacts']);">🛒 Cart</button>
+            <button id="contacts" onclick="select('contacts', ['homes', 'shops', 'carts']);">🪪 Contact</button>
         </nav>
     </header>
     <div id="spacer"></div>
@@ -30,8 +31,16 @@
             <span>ⓘ Your cart has been saved! <a onclick="select('carts', ['homes']);">Check out your cart</a></span>
             <button onclick="deleteParent(this);">ⓧ</button>
         </div>
-        <h1>Hello there 👋.</h1>
-        <p>This is home page.</p>
+        <h1>Welcome!</h1>
+        <p>Welcome to the Shop of Bazooka-ness™, where anything and everything is possible! Come have a look at our collection for sale, or <a onclick="select('contacts', ['homes']);">contact us</a> if you have more questions.</p>
+        <div id="pfp-container">
+            <img src="https://media.tenor.com/wGufiBV_pI0AAAAe/hide-the-pain-harold-pain.png" class="pfp" alt="Hide The Pain Harold"/>
+            <div>
+                <span>Made Possible By: </span>
+                <h2 style="text-align: left; display: inline-block;">Jeffrey Hou</h2>
+                <p>CEO, COO, CFO, CIO, CSO, CAO, CMO, CTO, and Web Developer of <strong>The Shop of Bazooka-ness™</strong>.</p>
+            </div>
+        </div>
         <button id="rickroll" onclick="setTimeout(() => {document.getElementById('rickroll').textContent = 'Loading ...';}, 200); setTimeout(() => {window.open('https://gifdb.com/images/thumbnail/rickroll-rick-astley-get-rickrolled-format-t2h9jutd39kd7mvr.gif', '_blank', 'noopener,noreferrer'); document.getElementById('rickroll').textContent = 'Secret Discount'; this.blur();}, 1000);">Secret Discount!!!</button>
     </div>
     <div id="shop" hidden>
@@ -40,7 +49,7 @@
             <div class="item">
                 <div>
                     <h2>The Holy Candy Apple</h2>
-                    <img src="https://ohsodelicioso.com/wp-content/uploads/2023/09/square-1.jpg" alt="the holy candy apple">
+                    <img src="https://ohsodelicioso.com/wp-content/uploads/2023/09/square-1.jpg" alt="the holy candy apple"/>
                     <p>This candy apple isn't your ordinary candy apple. Infused with holy water and each individually baptised by Pope Leo III, this is one candy apple you won't forget.</p>
                 </div>
                 <div class="item-child">
@@ -56,7 +65,7 @@
             <div class="item">
                 <div>
                     <h2>Blue Chickens</h2>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT184W9vQ2FkxuPku0DvgSLkIPowtsYFCHjjYgP-KaO5w&s" alt="blue chickens">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT184W9vQ2FkxuPku0DvgSLkIPowtsYFCHjjYgP-KaO5w&s" alt="blue chickens"/>
                     <p>We, using our ground-breaking technology, have created an extraordinary existence. Blue chickens are the national bird of Chickenland, and is said to have a tender bite and a built-in spicy kick.</p>
                 </div>
                 <div class="item-child">
@@ -72,7 +81,7 @@
             <div class="item">
                 <div>
                     <h2>Happily Evil Potionmakers</h2>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIo4ao0mh9ZznhTutbo2fFrSDQ97YVYJXCuRBkZunkai9_rfzaY0nBkNnR&s=10" alt="happily evil potionmakers">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIo4ao0mh9ZznhTutbo2fFrSDQ97YVYJXCuRBkZunkai9_rfzaY0nBkNnR&s=10" alt="happily evil potionmakers"/>
                     <p>We have rounded up some amazing potionmakers from the fairy world. They can make you any potion that is enough evil with the required materials. Don't anger them! Don't wait; limited stocks!</p>
                 </div>
                 <div class="item-child">
@@ -155,6 +164,24 @@
             </div>
             <p id="form-not-filled" class="error" hidden></p>
         </form>
+    </div>
+    <div id="contact" hidden>
+        <h1 id="contact-head">Contact Us!</h1>
+        <p>If you have any inquires, feel free to speak to us! Our customer service is available <strong>8 AM to 7 PM</strong>.</p>
+        <table id="contact-table" border="1">
+            <tr>
+                <td>Head of Customer Support:</td>
+                <td>Jeffrey Hou</td>
+            </tr>
+            <tr>
+                <td>Email Support:</td>
+                <td>Send an email to <strong><a href="mailto:jeffreyhou86@gmail.com" target="_blank">jeffreyhou86@gmail.com</a></strong></td>
+            </tr>
+            <tr>
+                <td>Text Support:</td>
+                <td>Text "HELP" to <strong>+1 (808) 849 3853</strong></td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
