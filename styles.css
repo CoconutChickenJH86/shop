@@ -45,7 +45,7 @@
     align-items: center;
     justify-content: center;
 }
-button {padding: 10px;}
+button, #confirmClear, #confirmOrder, #contact-table td {padding: 10px;}
 p, button, span {font-size: 17px;}
 .price, #order-successful button, #cart-saved button {font-size: 21px;}
 .item {display: block;}
@@ -73,7 +73,6 @@ form {margin: 0 10px; width: calc(100% - 20px);}
     right: 60px;
     width: max-content;
 }
-#confirmClear, #confirmOrder {padding: 10px;}
 #rickroll {opacity: 2%;}
 @media (min-width: 768px) {
     #shopa {
@@ -106,7 +105,7 @@ form {margin: 0 10px; width: calc(100% - 20px);}
     .controlo {padding: 0px;}
     p, button, span {font-size: 15px;}
     .price, #order-successful button, #cart-saved button {font-size: larger;}
-    button {padding: 5px;}
+    button, #confirmClear, #confirmOrder, #contact-table td {padding: 5px;}
     .item {
         display: flex;
         flex-direction: column;
@@ -118,10 +117,9 @@ form {margin: 0 10px; width: calc(100% - 20px);}
         padding: 5px;
         right: -200px;
     }
-    #confirmClear, #confirmOrder {padding: 5px;}
     #rickroll {opacity: 0;}
 }
-img {
+.item img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -185,7 +183,7 @@ header {
 .item:hover {transform: scale(101%);}
 nav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     background: #9ecef0;
     width: 100%;
     margin: 0;
@@ -222,7 +220,7 @@ div.item-child {
     align-items: center;
     margin-top: -20px;
 }
- #cartcontent tr:nth-child(even) {
+#cartcontent tr:nth-child(even) {
     background: var(--light-pc);
 }
 #cart-content-container {
@@ -238,7 +236,7 @@ a {
     color: var(--a-color);
     cursor: pointer;
 }
-tfoot, thead {text-align: left;}
+tfoot, thead, tbody {text-align: left;}
 tfoot {border-top: 1px solid var(--black);}
 form {
     border: 1px solid var(--black);
@@ -357,5 +355,32 @@ body > div {
     transition: opacity 0.3s ease;
 }
 #rickroll:hover, #rickroll:focus {opacity: 100%;}
+#contact-table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    border: 1px solid var(--black);
+}
+#contact-table tr td:first-child {font-weight: bold; width: 30%;}
+#contact-head ~ * {
+    margin: 0 auto;
+    text-align: center;
+}
+.pfp {
+    height: 120px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--black);
+}
+#pfp-container {
+    display: grid;
+    grid-template-columns: 140px auto;
+    border: 1px solid var(--black);
+    border-radius: 3px;
+    padding: 5px;
+}
+#pfp-container > * {margin: auto 0;}
 
 [hidden] {display: none !important;}
