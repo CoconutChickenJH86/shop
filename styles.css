@@ -73,7 +73,7 @@ form {margin: 0 10px; width: calc(100% - 20px);}
     right: 60px;
     width: max-content;
 }
-#rickroll {opacity: 2%;}
+#rickroll {opacity: 5%;}
 nav {grid-template-columns: repeat(2, 1fr);}
 @media (min-width: 768px) {
     #shopa {
