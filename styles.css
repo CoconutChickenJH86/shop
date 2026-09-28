@@ -351,9 +351,11 @@ body > div {
     border: none;
     background: var(--primary-color);
     color: var(--white);
-    position: absolute;
-    bottom: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
     transition: opacity 0.3s ease;
+    z-index: 9;
 }
 #rickroll:hover, #rickroll:focus {opacity: 100%;}
 #contact-table {
