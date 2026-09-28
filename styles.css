@@ -74,6 +74,7 @@ form {margin: 0 10px; width: calc(100% - 20px);}
     width: max-content;
 }
 #rickroll {opacity: 2%;}
+nav {grid-template-columns: repeat(2, 1fr);}
 @media (min-width: 768px) {
     #shopa {
         display: grid;
@@ -93,6 +94,7 @@ form {margin: 0 10px; width: calc(100% - 20px);}
         top: 0;
     }
     form {margin: 0 auto; width: 100%;}
+    nav {grid-template-columns: repeat(4, 1fr);}
 }
 @media (min-width: 1024px) {
     #shopa {
@@ -183,7 +185,6 @@ header {
 .item:hover {transform: scale(101%);}
 nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     background: #9ecef0;
     width: 100%;
     margin: 0;
@@ -361,7 +362,7 @@ body > div {
     border-collapse: collapse;
     border: 1px solid var(--black);
 }
-#contact-table tr td:first-child {font-weight: bold; width: 30%;}
+#contact-table tr td:nth-child(odd) {font-weight: bold; width: 30%;}
 #contact-head ~ * {
     margin: 0 auto;
     text-align: center;
@@ -381,6 +382,7 @@ body > div {
     border-radius: 3px;
     padding: 5px;
 }
+#pfp-container hr {grid-column: 1 / 3; margin: 10px 0;}
 #pfp-container > * {margin: auto 0;}
 
 [hidden] {display: none !important;}
