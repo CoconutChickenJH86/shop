@@ -47,3 +47,4 @@ Also, go to `submitFormA()` and change the validity to fit the new input.
 5. To change the maximum purchase, update if statement condition in `check()`, the UI message, and the error statement `p[id="error"]`. It is not recomended to delete the maximum purchase, but if it is nessesary, remove `check()`, `p[id="error"]`, and the section in the UI message.
 6. Currently, the data is alerted and forgotten. To remember, it is possible to directly save the output of `analyseData()` as it is an array.
 7. When doing any change, make sure everything works alright for phones `(max-width: 767px)` and tablets `(min-width: 768px)` as well as desktops `(min-width: 1023px)`.
+8. To change/edit the team, add an `img.pfp` (profile) and a `div` element. The `div` element should have a `h2` (name), `p a` (contact, eg. email), and `p` (role). Should be seperated by an `hr` element.
