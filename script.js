@@ -60,6 +60,7 @@ function addCart(counterId, item, price, button) {
     calculateTotal();
     storeCart();
     button.textContent = "Added!";
+    document.getElementById("finished-shopping").hidden = false;
     setTimeout(() => {
         button.textContent = "+ Add to Cart";
     }, 5000);
@@ -165,9 +166,6 @@ document.addEventListener("click", (event) => {
     document.getElementById("confirmClear").hidden = true;
     document.getElementById("confirmOrder").hidden = true;
 });
-setTimeout(() => {
-    document.getElementById("finished-shopping").hidden = false;
-}, 6000)
 
 // Sec. B: Submit Form
 function submitFormA(event) {
