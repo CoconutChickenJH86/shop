@@ -73,7 +73,11 @@ form {margin: 0 10px; width: calc(100% - 20px);}
     right: 60px;
     width: max-content;
 }
-#rickroll {opacity: 5%;}
+#rickroll {
+    opacity: 5%;
+    bottom: 20px;
+    left: 20px;
+}
 nav {grid-template-columns: repeat(2, 1fr);}
 @media (min-width: 768px) {
     #shopa {
@@ -95,6 +99,10 @@ nav {grid-template-columns: repeat(2, 1fr);}
     }
     form {margin: 0 auto; width: 100%;}
     nav {grid-template-columns: repeat(4, 1fr);}
+    #rickroll {
+        bottom: 10px;
+        left: 10px;
+    }
 }
 @media (min-width: 1024px) {
     #shopa {
@@ -352,8 +360,6 @@ body > div {
     background: var(--primary-color);
     color: var(--white);
     position: fixed;
-    bottom: 20px;
-    left: 20px;
     transition: opacity 0.3s ease;
     z-index: 9;
 }
