@@ -22,15 +22,17 @@
         </nav>
     </header>
     <div id="spacer"></div>
-    <div id="home">
+    <div>
         <div id="order-successful">
             <span>ⓘ Order placed successfully!</span>
             <button onclick="deleteParent(this);">ⓧ</button>
         </div>
         <div id="cart-saved">
-            <span>ⓘ Your cart has been saved! <a onclick="select('carts', ['homes']);">Check out your cart</a></span>
+            <span>ⓘ Your cart has been saved! <a onclick="select('carts', ['homes', 'shops', 'carts', 'contacts']); deleteParent(this.parentElement);">Check out your cart</a></span>
             <button onclick="deleteParent(this);">ⓧ</button>
         </div>
+    </div>
+    <div id="home">
         <h1>Welcome!</h1>
         <p>Welcome to the Shop of Bazooka-ness™, where anything and everything is possible! Come have a look at our collection for sale, or <a onclick="select('contacts', ['homes']);">contact us</a> if you have more questions.</p>
         <p style="margin-bottom: 0;"><strong>Made Possible By Our Team:</strong></p>
@@ -175,7 +177,7 @@
     </div>
     <div id="contact" hidden>
         <h1 id="contact-head">Contact Us!</h1>
-        <p style="margin-bottom: 10px;">If you have any inquires, feel free to speak to us! Our customer service is available <strong>8 AM to 7 PM</strong>.</p>
+        <p style="margin-bottom: 10px;">If you have any inquires, feel free to speak to us! Our customer service is available <strong>8 AM to 7 PM</strong>. Please note service is not available during school hours.</p>
         <table id="contact-table" border="1">
             <tr>
                 <td>CCO:</td>
