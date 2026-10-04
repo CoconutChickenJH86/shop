@@ -7,15 +7,6 @@ function values(id, add, n="10") {
     let newNumber;
     if (add) {
         newNumber = parseInt(number.textContent) + 1;
-    } else if (!add) {// Sec. A: Miscellaneous
-function values(id, add, n="10") {
-    const number = document.getElementById(id);
-    if (number.textContent === "0" && !add || number.textContent === n && add) {
-        return;
-    }
-    let newNumber;
-    if (add) {
-        newNumber = parseInt(number.textContent) + 1;
     } else if (!add) {
         newNumber = parseInt(number.textContent) - 1;
     }
