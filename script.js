@@ -221,14 +221,17 @@ function submitFormA(event) {
     event.stopPropagation();
 }
 function submitFormB() {
-    const data = analyseData();
     fetch("YOUR_URL", {
         method: "POST",
-        mode: "no-cors",
         body: JSON.stringify(data)
     })
-    .then(() => alert("Fetch completed"))
-    .catch(error => alert("Fetch failed:", error));
+    .then(response => {
+        alert("Status:", response.status);
+        alert("URL:", response.url);
+        return response.text();
+    })
+    .then(text => console.log("Response:", text))
+    .catch(error => console.error("Fetch error:", error));
     
     // Feed `analyseData()` into backend in future
     select('homes', ['checkouts'], true, true);
