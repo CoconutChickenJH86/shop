@@ -541,18 +541,7 @@ function submitFormA(event) {
     event.stopPropagation();
 }
 function submitFormB() {
-    fetch("https://script.google.com/macros/s/AKfycbzrS2T_v4D04tJ0GGOLqZqM_aT6VSlwznQ-iU7U-HFDjaj2EO2M17DeTFELjn7mCw/exec", {
-        method: "POST",
-        body: JSON.stringify(data)
-    })
-    .then(response => {
-        alert("Status:", response.status);
-        alert("URL:", response.url);
-        return response.text();
-    })
-    .then(text => console.log("Response:", text))
-    .catch(error => console.error("Fetch error:", error));
-    
+    alert(JSON.stringify(analyseData()));
     // Feed `analyseData()` into backend in future
     select('homes', ['checkouts'], true, true);
     clearCart(true);
