@@ -221,10 +221,15 @@ function submitFormA(event) {
     event.stopPropagation();
 }
 function submitFormB() {
-    fetch("https://script.google.com/macros/s/AKfycbzrS2T_v4D04tJ0GGOLqZqM_aT6VSlwznQ-iU7U-HFDjaj2EO2M17DeTFELjn7mCw/exec", {
+    const data = analyseData();
+    fetch("YOUR_URL", {
         method: "POST",
-        body: JSON.stringify(analyseData())
-    });
+        mode: "no-cors",
+        body: JSON.stringify(data)
+    })
+    .then(() => alert("Fetch completed"))
+    .catch(error => alert("Fetch failed:", error));
+    
     // Feed `analyseData()` into backend in future
     select('homes', ['checkouts'], true, true);
     clearCart(true);
