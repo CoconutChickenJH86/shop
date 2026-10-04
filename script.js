@@ -524,6 +524,11 @@ function submitFormA(event) {
 }
 function submitFormB() {
     alert(JSON.stringify(analyseData()));
+    fetch("https://script.google.com/macros/s/AKfycbxPLyQzl60izY4_YjITYWgNBjOyOs-XW8CtPKAW0yPXayFeAGU4qSKEmUFLnU41HGX4/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: analyseData()
+    });
     // Feed `analyseData()` into backend in future
     select('homes', ['checkouts'], true, true);
     clearCart(true);
@@ -543,15 +548,10 @@ function analyseData() {
         const quantity = parseInt(tRow.querySelector(".countero").textContent);
         cart[item] = (cart[item] || 0) + quantity;
     }
-    const total = parseFloat(
-        document.getElementById("totalprice").textContent.slice(1)
-    );
-    const form = document.querySelector("form");
-    const formResults = Object.fromEntries(new FormData(form));
     return {
         "Cart": cart,
-        "Total": total,
-        "Form Results": formResults
+        "Total": parseFloat(document.getElementById("totalprice").textContent.slice(1)),
+        "Form Results": Object.fromEntries(new FormData(document.querySelector("form")))
     };
 }
 function deleteParent(button, useParent=true) {
