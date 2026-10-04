@@ -224,7 +224,7 @@ function submitFormB() {
     fetch("https://script.google.com/macros/s/AKfycbzXFsjLgdLh4ztdHpLfqforOznbvDPZtllvd-AwMQvnp2pIiLFDH8WRWOeT91UjjM4F/exec", {
         method: "POST",
         mode: "no-cors",
-        body: analyseData()
+        body: JSON.stringify(analyseData())
     });
     // Feed `analyseData()` into backend in future
     select('homes', ['checkouts'], true, true);
