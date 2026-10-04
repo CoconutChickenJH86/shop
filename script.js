@@ -230,8 +230,6 @@ function submitFormA(event) {
     event.stopPropagation();
 }
 function submitFormB() {
-    alert(JSON.stringify(analyseData()));
-    // Feed `analyseData()` into backend in future
     select('homes', ['checkouts'], true, true);
     clearCart(true);
     document.querySelector("form").reset();
