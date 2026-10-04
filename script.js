@@ -230,25 +230,7 @@ function submitFormA(event) {
     event.stopPropagation();
 }
 function submitFormB() {
-    document.getElementById("order-successful").textContent = "Starting request...";
-
-    const data = analyseData();
-
-    document.getElementById("order-successful").textContent = "Data created. Sending...";
-
-    fetch("YOUR_URL", {
-        method: "POST",
-        mode: "no-cors",
-        body: JSON.stringify(data)
-    })
-    .then(() => {
-        document.getElementById("order-successful").textContent = "Fetch completed!";
-    })
-    .catch(error => {
-        document.getElementById("order-successful").textContent =
-            "Fetch failed: " + error;
-    });
-
+    alert(JSON.stringify(analyseData()));
     // Feed `analyseData()` into backend in future
     select('homes', ['checkouts'], true, true);
     clearCart(true);
