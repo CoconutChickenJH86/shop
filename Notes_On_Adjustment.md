@@ -44,7 +44,7 @@ Also, go to `submitFormA()` and change the validity to fit the new input.
 2. When adding a page, don't forget to add the page id to every `select()` and change `repeat()` in the CSS code in the `nav` element. Do not remove the original 3 pages: Home, Shop, Cart.
 3. To change the homepage, edit `div[id="home"]`.
 4. To change the favicon, edit the href attribute of `link[rel="icon" type="image/png"]`. Use .PNG with invisible background only. It is highly recomended to download logo and use `href="logo.png"`.
-5. To change the maximum purchase, update if statement condition in `check()`, the UI message, and the error statement `p[id="error"]`. It is not recomended to delete the maximum purchase, but if it is nessesary, remove `check()`, `p[id="error"]`, and the section in the UI message.
-6. Currently, the data is alerted and forgotten. To remember, it is possible to directly save the output of `analyseData()` as it is an array.
+5. To change the maximum purchase, update if statement condition in `check()`, the UI message, and the error statement `p[id="error"]`. It is not recommended to delete the maximum purchase, but if it is necessary, remove `check()`, `p[id="error"]`, and the section in the UI message.
+6. Currently, the data is sent to Google Apps Script. It is possible to update the `fetch` with another script.
 7. When doing any change, make sure everything works alright for phones `(max-width: 767px)` and tablets `(min-width: 768px)` as well as desktops `(min-width: 1023px)`.
 8. To change/edit the team, add an `img.pfp` (profile) and a `div` element. The `div` element should have a `h2` (name), `p a` (contact, eg. email), and `p` (role). Should be seperated by an `hr` element.
