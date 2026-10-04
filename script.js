@@ -253,15 +253,10 @@ function analyseData() {
         const quantity = parseInt(tRow.querySelector(".countero").textContent);
         cart[item] = (cart[item] || 0) + quantity;
     }
-    const total = parseFloat(
-        document.getElementById("totalprice").textContent.slice(1)
-    );
-    const form = document.querySelector("form");
-    const formResults = Object.fromEntries(new FormData(form));
     return {
         "Cart": cart,
-        "Total": total,
-        "Form Results": formResults
+        "Total": parseFloat(document.getElementById("totalprice").textContent.slice(1)),
+        "Form Results": Object.fromEntries(new FormData(document.querySelector("form")))
     };
 }
 function deleteParent(button, useParent=true) {
