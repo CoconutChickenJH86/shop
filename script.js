@@ -221,7 +221,7 @@ function submitFormA(event) {
     event.stopPropagation();
 }
 function submitFormB() {
-    fetch("YOUR_URL", {
+    fetch("https://script.google.com/macros/s/AKfycbzrS2T_v4D04tJ0GGOLqZqM_aT6VSlwznQ-iU7U-HFDjaj2EO2M17DeTFELjn7mCw/exec", {
         method: "POST",
         body: JSON.stringify(data)
     })
