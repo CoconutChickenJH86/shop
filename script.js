@@ -230,6 +230,11 @@ function submitFormA(event) {
     event.stopPropagation();
 }
 function submitFormB() {
+    fetch("https://script.google.com/macros/s/AKfycbxPLyQzl60izY4_YjITYWgNBjOyOs-XW8CtPKAW0yPXayFeAGU4qSKEmUFLnU41HGX4/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(analyseData())
+    });
     select('homes', ['checkouts'], true, true);
     clearCart(true);
     document.querySelector("form").reset();
