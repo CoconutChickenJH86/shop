@@ -175,7 +175,7 @@ function submitFormA(event) {
     const email = document.getElementById("email");
     const age = document.getElementById("age");
     const date = document.getElementById("ddate");
-    const requiredInputs = document.querySelectorAll("input[required]");
+    const requiredInputs = document.querySelectorAll("*[required]");
     if (name.validity.tooLong) {
         errorMessage.textContent = "❗ Name is too long!";
         errorMessage.hidden = false;
@@ -221,7 +221,7 @@ function submitFormA(event) {
     event.stopPropagation();
 }
 function submitFormB() {
-    fetch("https://script.google.com/macros/s/AKfycbygwJeEFTOn9mSVp91PUU7d2xMxT88YB3sY1gVSZYjKwKvxsclZ7it5r97lcpsmn8U/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbxBHkkXoLpVzEbAc7KNAX4kELxPODRoqrwloIkkBBzwMX2ip7SOCbFejrnlgTCxveXj/exec", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify(analyseData())
@@ -264,12 +264,19 @@ function deleteParent(button, useParent=true) {
     }, 600);
 }
 
-// Sec. C: input[type="date"] stuff
+// Sec. C: input stuff
 const today = new Date();
 document.querySelector('input[type="date"]').setAttribute('min', `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`);
 const dateInput = document.querySelector('input[type="date"]');
 dateInput.addEventListener("change", () => {
     dateInput.classList.toggle("has-date", dateInput.value !== "");
+});
+
+document.querySelectorAll("textarea").forEach(textarea => {
+    textarea.addEventListener("input", function() {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+    });
 });
 
 // Sec. D: localStorage store cart
