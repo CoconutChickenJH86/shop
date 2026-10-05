@@ -27,7 +27,7 @@ Counter has a third optional argument to manipulate maximum value. Argument shou
 
 # Part II: Checkout Form
 
-To add a new input for the checkout form, just add in the space between start of form and `#form-buttons`. If using new input type, style accordingly with CSS. Make sure to add a `label` element for the input and a `name` attribute.
+To add a new input for the checkout form, just add in the space between start of form and `#form-buttons`. Also update the Apps Script for the new/amended question. If using new input type, style accordingly with CSS. Make sure to add a `label` element for the input and a `name` attribute.
 
 **Supported Inputs (CSS)**
 - text
