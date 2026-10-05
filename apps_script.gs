@@ -3,7 +3,7 @@ function doPost(e) {
 }
 
 function addToOrders(data) {
-  const sheet = SpreadsheetApp.openById("spreadsheetFileId").getSheets()[0];
+  const sheet = SpreadsheetApp.openById("idOfGoogleSheets").getSheets()[0];
   let i = 2;
   while (true) {
     if (!(sheet.getRange("A" + String(i)).getValue() === "")) {
@@ -13,7 +13,7 @@ function addToOrders(data) {
     }
   }
   const formResults = data["Form Results"];
-  sheet.getRange("A" + String(i)).setValue(new Date().toISOString().split("T")[0]);
+  sheet.getRange("A" + String(i)).setValue(Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd"));
   sheet.getRange("B" + String(i)).setValue(formResults["Name"]);
   let cartItems = [];
   for (const [key, value] of Object.entries(data["Cart"])) {
