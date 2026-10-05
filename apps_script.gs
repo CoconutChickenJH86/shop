@@ -3,7 +3,7 @@ function doPost(e) {
 }
 
 function addToOrders(data) {
-  const sheet = SpreadsheetApp.openById("idOfGoogleSheets").getSheets()[0];
+  const sheet = SpreadsheetApp.openById("spreadsheetId").getSheets()[0];
   let i = 2;
   while (true) {
     if (!(sheet.getRange("A" + String(i)).getValue() === "")) {
@@ -13,16 +13,20 @@ function addToOrders(data) {
     }
   }
   const formResults = data["Form Results"];
-  sheet.getRange("A" + String(i)).setValue(Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd"));
-  sheet.getRange("B" + String(i)).setValue(formResults["Name"]);
+  const addToSheet = (l, i, value) => {
+    sheet.getRange(l + String(i)).setValue(value);
+  };
+  addToSheet("A", i, Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd"));
+  addToSheet("B", i, formResults["Name"]);
   let cartItems = [];
   for (const [key, value] of Object.entries(data["Cart"])) {
     cartItems.push("- " + key + ": " + value);
   }
-  sheet.getRange("C" + String(i)).setValue(cartItems.join("\n"));
-  sheet.getRange("D" + String(i)).setValue(data["Total"]);
-  sheet.getRange("E" + String(i)).setValue(formResults["Delivery Date"]);
-  sheet.getRange("F" + String(i)).setValue(formResults["Email"]);
-  sheet.getRange("G" + String(i)).setValue(formResults["Age"]);
-  sheet.getRange("H" + String(i)).setValue(formResults["Place of Delivery"]);
+  addToSheet("C", i, cartItems.join("\n"));
+  addToSheet("D", i, data["Total"]);
+  addToSheet("E", i, formResults["Delivery Date"]);
+  addToSheet("F", i, formResults["Email"]);
+  addToSheet("G", i, formResults["Age"]);
+  addToSheet("H", i, formResults["Place of Delivery"]);
+  addToSheet("I", i, formResults["Comments"]);
 }
