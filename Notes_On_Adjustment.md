@@ -51,8 +51,7 @@ Also, go to `submitFormA()` and change the validity to fit the new input.
 8. To change/edit the team, add an `img.pfp` (profile) and a `div` element. The `div` element should have a `h2` (name), `p a` (contact, eg. email), and `p` (role). Should be seperated by an `hr` element.
 9. When adding a banner, apply 'banner' class and use syntax [^1].
 
-[^1]: code syntax:
-```html
+[^1]: code syntax:```html
 <div class="banner" id="idForJs">
     <span>Icon Information</span>
     <button onclick="deleteParent(this)">ⓧ</button>
