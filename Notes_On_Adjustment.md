@@ -49,11 +49,4 @@ Also, go to `submitFormA()` and change the validity to fit the new input.
 6. Currently, the data is sent to Google Apps Script. It is possible to update the `fetch` with another script.
 7. When doing any change, make sure everything works alright for phones `(max-width: 767px)` and tablets `(min-width: 768px)` as well as desktops `(min-width: 1023px)`.
 8. To change/edit the team, add an `img.pfp` (profile) and a `div` element. The `div` element should have a `h2` (name), `p a` (contact, eg. email), and `p` (role). Should be seperated by an `hr` element.
-9. When adding a banner, apply 'banner' class and use syntax [^1].
-
-[^1]: code syntax:```html
-<div class="banner" id="idForJs">
-    <span>Icon Information</span>
-    <button onclick="deleteParent(this)">ⓧ</button>
-</div>
-```
+9. When adding a banner, apply 'banner' class and use syntax `<div class="banner" id="idForJs"><span>Icon Information</span><button onclick="deleteParent(this)">ⓧ</button></div>`.
