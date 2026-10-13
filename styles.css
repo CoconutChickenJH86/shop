@@ -79,6 +79,7 @@ form {margin: 0 10px; width: calc(100% - 20px);}
     left: 20px;
 }
 nav {grid-template-columns: repeat(2, 1fr);}
+#spacer {height: calc(332.18px - 10.08vw);}
 @media (min-width: 768px) {
     #shopa {
         display: grid;
@@ -298,26 +299,27 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     -webkit-appearance: none;
     margin: 0;
 }
-#order-successful, #cart-saved {
+.banner {
     display: none;
     background: var(--green);
     border-radius: 3px;
     padding: 10px;
     position: relative;
     transition: opacity 0.5s ease;
+    margin-bottom: 10px;
 }
-#order-successful button, #cart-saved button {
+.banner button {
     border: none;
     background: transparent;
     position: absolute;
     right: 10px;
     top: 5px;
     padding: 0;
+    font-size: 20px;
 }
-#order-successful span, #cart-saved span {display: block; width: 95%;}
+.banner span {display: block; width: 95%;}
 #spacer {
     height: calc(312.18px - 10.08vw);
-     /* I'm so bad at math, the above was made using AI */
     min-height: 150px;
     max-height: 300px;
 }
@@ -398,5 +400,6 @@ textarea {
     cursor: text;
 }
 label {cursor: pointer;}
+.headingt {margin-top: 0;}
 
 [hidden] {display: none !important;}
