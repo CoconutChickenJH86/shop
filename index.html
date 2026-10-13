@@ -23,17 +23,21 @@
     </header>
     <div id="spacer"></div>
     <div>
-        <div id="order-successful">
-            <span>ⓘ Order placed successfully!</span>
+        <div id="order-successful" class="banner">
+            <span>🗹 Order placed successfully!</span>
             <button onclick="deleteParent(this);">ⓧ</button>
         </div>
-        <div id="cart-saved">
-            <span>ⓘ Your cart has been saved! <a onclick="select('carts', ['homes', 'shops', 'carts', 'contacts']); deleteParent(this.parentElement);">Check out your cart</a></span>
+        <div id="cart-saved" class="banner">
+            <span>★ Your cart has been saved! <a onclick="select('carts', ['homes', 'shops', 'carts', 'contacts']); deleteParent(this.parentElement);">Check out your cart</a></span>
+            <button onclick="deleteParent(this);">ⓧ</button>
+        </div>
+        <div class="banner" style="display: block;">
+            <span>ⓘ <strong>Disclaimer</strong>: This shop currently is not selling. You are welcome to try it out, but nothing will ever happen afterwards.</span>
             <button onclick="deleteParent(this);">ⓧ</button>
         </div>
     </div>
     <div id="home">
-        <h1>Welcome!</h1>
+        <h1 class="headingt">Welcome!</h1>
         <p>Welcome to the Shop of Bazooka-ness™, where anything and everything is possible! Come have a look at our collection for sale, or <a onclick="select('contacts', ['homes']);">contact us</a> if you have more questions.</p>
         <p style="margin-bottom: 0;"><strong>Made Possible By Our Team:</strong></p>
         <div id="pfp-container">
@@ -54,7 +58,7 @@
         <button id="rickroll" onclick="setTimeout(() => {document.getElementById('rickroll').textContent = 'Loading ...';}, 200); setTimeout(() => {window.open('https://gifdb.com/images/thumbnail/rickroll-rick-astley-get-rickrolled-format-t2h9jutd39kd7mvr.gif', '_blank', 'noopener,noreferrer'); document.getElementById('rickroll').textContent = 'Secret Discount'; this.blur();}, 1000);">Secret Discount!!!</button>
     </div>
     <div id="shop" hidden>
-        <h1>Shop</h1>
+        <h1 class="headingt">Shop</h1>
         <div id="shopa">
             <div class="item">
                 <div>
@@ -108,7 +112,7 @@
         <p style="text-align: center;" id="finished-shopping" hidden>Finished Shopping? Go to your cart and check out <a onclick="select('carts', ['shops']);">here</a>!</p>
     </div>
     <div id="cart" hidden>
-        <h1>Your Cart</h1>
+        <h1 class="headingt">Your Cart</h1>
         <p id="cart-empty" style="color: var(--black);" class="error">❗ Nothing in cart yet! Buy some stuff first <a onclick="select('shops', ['carts']);">at the shop</a>.</p>
         <div id="cart-content-container" hidden>
             <button onclick="this.nextElementSibling.hidden = false; event.stopPropagation();" id="clear-cart-btn">🗑 Clear Cart</button>
@@ -145,7 +149,7 @@
     <div id="checkout" hidden>
         <div style="position: relative;">
             <button onclick="select('carts', ['checkouts'], true, true);" id="checkouts">← Back to Cart</button>
-            <h1>Checkout</h1>
+            <h1 class="headingt">Checkout</h1>
             <p style="text-align: center;">Please complete the form to finish checking out.</p>
         </div>
         <form onsubmit="submitFormA(event);" novalidate>
@@ -178,7 +182,7 @@
         </form>
     </div>
     <div id="contact" hidden>
-        <h1 id="contact-head">Contact Us!</h1>
+        <h1 id="contact-head" class="headingt">Contact Us!</h1>
         <p style="margin-bottom: 10px;">If you have any inquires, feel free to speak to us! Our customer service is available <strong>8 AM to 7 PM</strong>. Please note service is not available during school hours.</p>
         <table id="contact-table" border="1">
             <tr>
