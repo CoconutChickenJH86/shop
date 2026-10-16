@@ -12,6 +12,7 @@ function values(id, add, n="10") {
     }
     number.textContent = newNumber;
 }
+
 function select(newId, prevIds, menu=true, override=false) {
     if (document.getElementById("checkout").hidden === false && !override) {
         return;
@@ -25,6 +26,7 @@ function select(newId, prevIds, menu=true, override=false) {
     }
     document.getElementById(newId.slice(0, -1)).hidden = false;
 }
+
 function addCart(counterId, item, price, button) {
     const numberOfItems = parseInt(document.getElementById(counterId).textContent);
     if (numberOfItems === 0) {
@@ -125,6 +127,7 @@ function calculateTotal() {
     const textArray = Array.from(elements, element => parseFloat(element.textContent.slice(1)));
     document.getElementById("totalprice").textContent = "$" + textArray.reduce((a, b) => a + b, 0).toFixed(2);
 }
+
 function check() {
     if (parseFloat(document.getElementById("totalprice").textContent.slice(1)) > 50) {
         document.getElementById("error").hidden = false;
@@ -135,6 +138,7 @@ function check() {
         select('checkouts', ['carts'], false);
     }
 }
+
 function valuesCart(button, add, n="10") {
     const number = button.parentElement.querySelector(".countero");
     if (number.textContent === n && add) {
@@ -156,6 +160,7 @@ function valuesCart(button, add, n="10") {
     calculateTotal();
     storeCart();
 }
+
 document.addEventListener("click", (event) => {
     if (event.target.closest(".confirm") || event.target.closest("#confirmClear") || event.target.closest("#confirmOrder")) {
         return;
@@ -166,7 +171,9 @@ document.addEventListener("click", (event) => {
     document.getElementById("confirmClear").hidden = true;
     document.getElementById("confirmOrder").hidden = true;
 });
+
 document.querySelector("#spacer").style.height = document.querySelector("header").getBoundingClientRect().height + "px";
+window.addEventListener("resize", () => document.querySelector("#spacer").style.height = document.querySelector("header").getBoundingClientRect().height + "px");
 
 // Sec. B: Submit Form
 function submitFormA(event) {
