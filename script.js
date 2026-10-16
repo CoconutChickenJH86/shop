@@ -179,40 +179,45 @@ window.addEventListener("resize", () => document.querySelector("#spacer").style.
 function submitFormA(event) {
     event.preventDefault();
     const errorMessage = document.getElementById("form-not-filled");
+    const errorMsg = value => {
+        errorMessage.textContent = value;
+        errorMessage.hidden = false;
+    };
+    if (!navigator.onLine) {
+        errorMsg("❗ It appears you are offline. Please retry when you have internet connection.");
+        setTimeout(() => {
+            errorMessage.textContent = "";
+            errorMessage.hidden = true;
+        }, 3000);
+        return;
+    }
     const name = document.getElementById("name");
     const email = document.getElementById("email");
     const age = document.getElementById("age");
     const date = document.getElementById("ddate");
     const requiredInputs = document.querySelectorAll("*[required]");
     if (name.validity.tooLong) {
-        errorMessage.textContent = "❗ Name is too long!";
-        errorMessage.hidden = false;
+        errorMsg("❗ Name is too long!");
         name.focus();
     } else if (email.validity.typeMismatch) {
-        errorMessage.textContent = "❗ Incorrect email format!";
-        errorMessage.hidden = false;
+        errorMsg("❗ Incorrect email format!");
         email.focus();
     } else if (age.validity.badInput) {
-        errorMessage.textContent = "❗ Age has to be a number!";
-        errorMessage.hidden = false;
+        errorMsg("❗ Age has to be a number!");
         age.focus();
     } else if (age.validity.rangeUnderflow) {
-        errorMessage.textContent = "❗ Age has to be above 0!";
-        errorMessage.hidden = false;
+        errorMsg("❗ Age has to be above 0!");
         age.focus();
     } else if (age.validity.stepMismatch) {
-        errorMessage.textContent = "❗ Age should be a whole number!";
-        errorMessage.hidden = false;
+        errorMsg("❗ Age should be a whole number!");
         age.focus();
     } else if (date.validity.rangeUnderflow) {
-        errorMessage.textContent = "❗ Date should be today and beyond!";
-        errorMessage.hidden = false;
+        errorMsg("❗ Date should be today and beyond!");
         date.focus();
     }
     for (const input of requiredInputs) {
         if (input.validity.valueMissing) {
-            errorMessage.textContent = "❗ Please fill out all required fields.";
-            errorMessage.hidden = false;
+            errorMsg("❗ Please fill out all required fields.");
             document.activeElement.blur();
             input.focus();
             break;
@@ -229,6 +234,15 @@ function submitFormA(event) {
     event.stopPropagation();
 }
 function submitFormB() {
+    if (!navigator.onLine) {
+        errorMessage.textContent = "❗ It appears you are offline. Please retry when you have internet connection.";
+        errorMessage.hidden = false;
+        setTimeout(() => {
+            errorMessage.textContent = "";
+            errorMessage.hidden = true;
+        }, 3000);
+        return;
+    }
     fetch("https://script.google.com/macros/s/AKfycbxBHkkXoLpVzEbAc7KNAX4kELxPODRoqrwloIkkBBzwMX2ip7SOCbFejrnlgTCxveXj/exec", {
         method: "POST",
         mode: "no-cors",
