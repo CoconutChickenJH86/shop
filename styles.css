@@ -79,7 +79,6 @@ form {margin: 0 10px; width: calc(100% - 20px);}
     left: 20px;
 }
 nav {grid-template-columns: repeat(2, 1fr);}
-#spacer {height: calc(332.18px - 10.08vw);}
 @media (min-width: 768px) {
     #shopa {
         display: grid;
@@ -318,11 +317,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     font-size: 20px;
 }
 .banner span {display: block; width: 95%;}
-#spacer {
-    height: calc(312.18px - 10.08vw);
-    min-height: 150px;
-    max-height: 300px;
-}
 body {background: var(--white); margin: 0; padding: 0;}
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 1000px var(--light-pc) inset;
