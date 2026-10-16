@@ -166,6 +166,7 @@ document.addEventListener("click", (event) => {
     document.getElementById("confirmClear").hidden = true;
     document.getElementById("confirmOrder").hidden = true;
 });
+document.querySelector("#spacer").style.height = document.querySelector("header").getBoundingClientRect().height + "px";
 
 // Sec. B: Submit Form
 function submitFormA(event) {
