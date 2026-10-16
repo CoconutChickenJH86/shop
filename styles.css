@@ -7,6 +7,7 @@
     --placeholder: #818397;
     --a-color: #2485c9;
     --green: #85e35f;
+    --invert: none;
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -18,6 +19,7 @@
         --placeholder: #c7c7c7;
         --a-color: #9ecef0;
         --green: #24630a;
+        --invert: invert(1);
     }
 }
 
@@ -287,7 +289,10 @@ input[type="date"].has-date::-webkit-datetime-edit {
     color: var(--black);
     font-style: normal;
 }
-input[type="date"]::-webkit-calendar-picker-indicator {cursor: pointer;}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: var(--invert);
+}
 input[type="radio"] {display: none;}
 label:has(input[type="radio"]:checked) {
     background: var(--primary-color);
@@ -346,7 +351,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     gap: 7px;
     justify-content: center;
 }
-#confirmOrder * {width: fit-content;}
+#confirmOrder * {width: fit-contents;}
 body > div {
     padding: 10px;
     box-sizing: border-box;
