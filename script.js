@@ -243,7 +243,7 @@ function submitFormB() {
         }, 3000);
         return;
     }
-    fetch("https://script.google.com/macros/s/AKfycbxBHkkXoLpVzEbAc7KNAX4kELxPODRoqrwloIkkBBzwMX2ip7SOCbFejrnlgTCxveXj/exec", {
+    fetch("https://script.google.com/macros/s/ScriptID123/exec", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify(analyseData())
