@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>Da Shop of Bazooka-ness</title>
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -11,7 +11,7 @@
 <body>
     <header>
         <div style="margin: 10px;">
-            <h1 style="color: white;">The Shop of Bazooka-ness™</h1>
+            <h1 style="color: white;">Da Shop of Bazooka-ness™</h1>
             <p style="color: white;">Our Shop contains all of your daily needs and more! Come explore and pick up your favorites. Everything you can imagine is available!</p>
         </div>
         <nav>
@@ -24,7 +24,8 @@
     <div id="spacer"></div>
     <div>
         <div id="order-successful" class="banner">
-            <span>🗹 Order placed successfully!</span>
+            <span>&#x1F5F9; Order placed successfully!</span>
+            <!-- Normal Icon wasn't working -->
             <button onclick="deleteParent(this);">ⓧ</button>
         </div>
         <div id="cart-saved" class="banner">
@@ -38,21 +39,21 @@
     </div>
     <div id="home">
         <h1 class="headingt">Welcome!</h1>
-        <p>Welcome to the Shop of Bazooka-ness™, where anything and everything is possible! Come have a look at our collection for sale, or <a onclick="select('contacts', ['homes']);">contact us</a> if you have more questions.</p>
+        <p>Welcome to Da Shop of Bazooka-ness™, where anything and everything is possible! Come have a look at our collection for sale, or <a onclick="select('contacts', ['homes']);">contact us</a> if you have more questions.</p>
         <p style="margin-bottom: 0;"><strong>Made Possible By Our Team:</strong></p>
         <div id="pfp-container">
             <img src="https://media.tenor.com/wGufiBV_pI0AAAAe/hide-the-pain-harold-pain.png" class="pfp" alt="Hide The Pain Harold"/>
             <div>
                 <h2 style="text-align: left;">Jeffrey Hou</h2>
                 <p><a href="mailto:jeffreyhou86@gmail.com">jeffreyhou86@gmail.com</a></p>
-                <p>CEO, COO, CFO, CIO, CSO, CAO, CMO, CCO, CTO, and Web Developer of <strong>The Shop of Bazooka-ness™</strong>.</p>
+                <p>CEO, COO, CFO, CIO, CSO, CAO, CMO, CCO, CTO, and Web Developer of <strong>Da Shop of Bazooka-ness™</strong>.</p>
             </div>
             <hr>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYxKZJWJNJQQd3o4L97Anr3-jATWnFT11aUNH-aU87OC-ztWzaZQwI4Ao&s=10" class="pfp" alt="Emotional Support Chicken" style="transform: rotate(180deg);" title="what you looking at? 🧐"/>
             <div>
                 <h2 style="text-align: left;">Chicken</h2>
                 <p>No Contact Information Available</p>
-                <p>Emotional Support of the CEO of <strong>The Shop of Bazooka-ness™</strong>.</p>
+                <p>Emotional Support of the CEO of <strong>Da Shop of Bazooka-ness™</strong>.</p>
             </div>
         </div>
         <button id="rickroll" onclick="setTimeout(() => {document.getElementById('rickroll').textContent = 'Loading ...';}, 200); setTimeout(() => {window.open('https://gifdb.com/images/thumbnail/rickroll-rick-astley-get-rickrolled-format-t2h9jutd39kd7mvr.gif', '_blank', 'noopener,noreferrer'); document.getElementById('rickroll').textContent = 'Secret Discount'; this.blur();}, 1000);">Secret Discount!!!</button>
@@ -175,7 +176,7 @@
             <div id="confirmOrder" hidden>
                 <span>Please confirm placing order.</span>
                 <button onclick="submitFormB();" type="button" style="color: var(--primary-color);">Yes</button>
-                <span>|</span>
+                <div style="width: 1px; margin: 0 10px; background: var(--black);"></div>
                 <button onclick="document.getElementById('confirmOrder').hidden = true;" type="button">No</button>
             </div>
             <p id="form-not-filled" class="error" hidden></p>
