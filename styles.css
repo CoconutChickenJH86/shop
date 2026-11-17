@@ -115,7 +115,7 @@ nav {grid-template-columns: repeat(2, 1fr);}
     .control {font-size: 20px; padding: 3px;}
     .counter {font-size: 25px;}
     .controlo {padding: 0px;}
-    p, button, span {font-size: 15px;}
+    p, span {font-size: 15px;}
     .price, #order-successful button, #cart-saved button {font-size: larger;}
     button, #confirmClear, #confirmOrder, #contact-table td {padding: 5px;}
     .item {
@@ -124,7 +124,7 @@ nav {grid-template-columns: repeat(2, 1fr);}
         justify-content: space-between;
         gap: 0;
     }
-    input[type="text"], input[type="number"], input[type="email"], input[type="date"], .rlabel, form button, textarea {font-size: 15px; padding: 3px;}
+    input[type="text"], input[type="number"], input[type="email"], input[type="date"], .rlabel, button, textarea {font-size: 15px; padding: 3px;}
     .confirm {
         padding: 5px;
         right: -200px;
@@ -350,6 +350,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     display: flex;
     gap: 7px;
     justify-content: center;
+    align-items: stretch;
 }
 #confirmOrder * {width: fit-contents;}
 body > div {
