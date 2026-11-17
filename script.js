@@ -25,6 +25,10 @@ function select(newId, prevIds, menu=true, override=false) {
         document.getElementById(newId).classList.add("select");
     }
     document.getElementById(newId.slice(0, -1)).hidden = false;
+    window.scrollTo({
+        top: 0,
+        behavior: "instant"
+    });
 }
 
 function addCart(counterId, item, price, button) {
@@ -231,10 +235,15 @@ function submitFormA(event) {
         return;
     }
     document.getElementById('confirmOrder').hidden = false;
+    window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth"
+    });
     event.stopPropagation();
 }
 function submitFormB() {
     if (!navigator.onLine) {
+        const errorMessage = document.getElementById("form-not-filled");
         errorMessage.textContent = "❗ It appears you are offline. Please retry when you have internet connection.";
         errorMessage.hidden = false;
         setTimeout(() => {
@@ -243,7 +252,7 @@ function submitFormB() {
         }, 3000);
         return;
     }
-    fetch("https://script.google.com/macros/s/ScriptID123/exec", {
+    fetch("gs_url", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify(analyseData())
@@ -264,7 +273,8 @@ function analyseData() {
     for (const tRow of tRows) {
         const item = tRow.querySelector(".product").textContent;
         const quantity = parseInt(tRow.querySelector(".countero").textContent);
-        cart[item] = (cart[item] || 0) + quantity;
+        const price = parseFloat(tRow.querySelector(".prices").textContent.slice(1));
+        cart[item] = [(cart[item]?.[0] || 0) + quantity, price];
     }
     return {
         "Cart": cart,
